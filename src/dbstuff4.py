@@ -3,10 +3,12 @@ from mysql.connector import errorcode
 
 try:
     cnx = mysql.connector.connect(
-        user='wt5v', password="kdog2558", database='classicmodels', host='GK-mini.lan')
+        user='wt5v', password="kdog2558", database='classicmodels',
+        host='GK-mini.lan')
     cursor = cnx.cursor()
 
-    query = "SELECT c.customerName, sum(o2.quantityOrdered), sum(o2.priceEach) \
+    query = "SELECT c.customerName, sum(o2.quantityOrdered), \
+             sum(o2.priceEach) \
              FROM customers c, orders o, orderdetails o2 \
             WHERE c.customerNumber = o.customerNumber \
               AND o.orderNumber = o2.orderNumber \
