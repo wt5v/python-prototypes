@@ -3,7 +3,7 @@ from mysql.connector import errorcode
 
 try:
     cnx = mysql.connector.connect(
-        user='wt5v', password="kdog2558", database='classicmodels',
+        user='wt5v', password="xxxxxx", database='classicmodels',
         host='GK-mini.lan')
     cursor = cnx.cursor()
 
